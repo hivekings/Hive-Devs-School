@@ -1,0 +1,134 @@
+.post-header1 {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 53px;
+  margin-top: 20px;
+  font-family: Raleway;
+}
+
+.post-header3 {
+  font-family: Raleway;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 53px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px rgba(27, 153, 139, 1);
+}
+
+.post-editor {
+  border-right: solid 2px rgba(27, 153, 139, 1);
+}
+
+.EasyMDEContainer {
+  border: 2px solid black;
+  font-size: 20px;
+
+  overflow-x: hidden;
+  /* border-image-source: linear-gradient(
+    191.94deg,
+    #000000 12.56%,
+    #980c0c 103.02%
+  ); */
+}
+
+.cm-s-easymde {
+}
+
+.editor-toolbar {
+  border-bottom: 2px solid black;
+}
+
+.editor-statusbar {
+  border-top: 2px solid black;
+}
+
+.post-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: black;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.tags-box {
+  border: 2px solid black;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  min-height: 60px;
+}
+
+.tags-box span {
+  color: rgba(27, 153, 139, 1);
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Raleway";
+}
+
+.tags-box ul {
+  list-style: none;
+}
+
+.tags-box ul li {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 15px;
+  font-family: "Raleway";
+  border: 3px solid #000000;
+  box-shadow:  0px 4px 4px #000000;
+  border-radius: 13px;
+  margin-top: 6px;
+  padding: 4px 8px; 
+  font-weight: 900;
+}
+
+.post-title__input {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: black;
+}
+
+.preview-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 35px;
+  margin-left: 5vw;
+  color: red;
+}
+
+/* .preview-post{
+    border: 2px solid black;
+    margin-top: 6vh;
+} */
+
+.preview-reactmarkdown {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 20px;
+  margin-top: 7vh;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.fa {
+  color: rgba(27, 153, 139, 1);
+  font-size: 20px;
+}
+
+.publish-btn {
+  background: #000000;
+  border-radius: 13px;
+  border: none;
+  color: white;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 900;
+  width: 15%;
+  font-size: 25px;
+}

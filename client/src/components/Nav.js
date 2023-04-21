@@ -1,0 +1,150 @@
+
+import Nav from "react-bootstrap/Nav";
+import { useState } from "react";
+import Image from "react-bootstrap/Image"
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
+import fefeas from "../images/a.png";
+import hamburguer from "../images/sandwich.svg";
+import closebtn from '../images/close_btn.svg';
+
+function Nava() {
+  function login() {
+    if (localStorage.getItem("username")) {
+       return;
+    } else {
+      const username = prompt("Please enter your hive username.");
+      if (username) {
+        window.hive_keychain.requestSignBuffer(
+          username,
+          "Login",
+          "Posting",
+          (res) => {
+            if (res.success) {
+              localStorage.setItem("username", res.data.username);
+              setUser(localStorage.getItem("username"));
+              window.location.reload();
+            }
+          }
+        );
+      }
+    }
+  }
+
+  function logOut() {
+    localStorage.removeItem("username");
+  }
+
+  function toggleMenu() {
+    var menu = document.querySelector('.navbar__list');
+    var items = document.querySelectorAll('.navbar__list__listelement');
+    
+    if (menu.style.display === 'flex') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'flex';
+    }
+    
+    items.forEach(function(item) {
+      if (item.style.display === 'block') {
+        item.style.display = 'none';
+      } else {
+        item.style.display = 'block';
+      }
+    });
+  }
+
+  const [user, setUser] = useState(localStorage.getItem("username"));
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu2 = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+
+  return (
+
+    <Nav  className="navbar">
+      <h5 className="navbar__brand"> <Link to="/"><span className="me-1" style={{color:"red"}}>HIVE</span> LEARN</Link> </h5>
+       {/* <img onClick={toggleMenu} src={hamburguer} className="navbar__menu"></img> */}
+       <img onClick={toggleMenu2} src={hamburguer} className="navbar__menu" alt="Menu"></img>
+      <ul className="navbar__list">
+        <li className="navbar__list__listelement"><Link to="/Learn">Learn</Link></li>
+        <li className="navbar__list__listelement"><Link to="/resources">Resources</Link> </li>
+        <li className="navbar__list__listelement"><Link to="/biblioteca">Library</Link></li>
+        <li className="navbar__list__listelement"><a href="https://discord.com/channels/1004483228561834074/1004483229476200621"> Get Involved </a> </li>
+       { !user ?  
+       (<li onClick={login} className="navbar__list__listelement navbar__list__listelement--image" ><img src={fefeas}></img>Connect Wallet</li>) :
+        <NavDropdown className="navbar__list__listelement" title={<><Image height="40px" roundedCircle src={"https://images.hive.blog/u/" + user + "/avatar"} /> <Link to={"/portfolio/"+ user}>{user}</Link></>} id="basic-nav-dropdown">
+          <NavDropdown.Item className="" onClick={logOut}>Logout</NavDropdown.Item>
+        </NavDropdown>
+        }
+        {/* <li>  <Image height="40px" roundedCircle src={"https://images.hive.blog/u/" + localStorage.getItem("username") + "/avatar"} /> {user}</li> */}
+      </ul>
+      
+      {/* Modal */}
+      {isMenuOpen && (
+        <div className="modal-overlay">
+            {/* Modal content */}
+
+            <ul className="modal__list">
+              <li className="modal__list__listelement--closebtn" onClick={()=>setIsMenuOpen(false)}><img src={closebtn} /></li>
+              <li className="modal__list__listelement"><a href="/Learn">Learn</a></li>
+              <li className="modal__list__listelement"><a href="/resources">Resources</a></li>
+              <li className="modal__list__listelement"><a href="/biblioteca">Library</a></li>
+              <li className="modal__list__listelement"><a href="https://discord.com/channels/1004483228561834074/1004483229476200621">Get Involved</a></li>
+              {!user ? (
+                <li className="modal__list__listelement" onClick={login}><img src={fefeas} alt="Connect Wallet" /> Connect Wallet</li>
+              ) : (
+                <li className="modal__list__listelement--image">
+                  <img height="40px" src={`https://images.hive.blog/u/${user}/avatar`} alt="Profile Avatar" />
+                  <a href={`/portfolio/${user}`}>{user}</a>
+                </li>
+              )}
+            </ul>
+            {/* Add your modal content here */}
+        </div>
+      )}
+
+
+
+    </Nav>
+    //Nav with links to other pages 1 to the right and 3 to the left, the left ones should collapse into a hamburger menu on smaller screens
+    // <Navbar
+    //   className="d-flex justify-content-between "
+    //   expand="lg"
+    //   bg="secondary"
+    //   variant="dark"
+    // >
+    //   <Navbar.Brand className="ms-3" href="/">
+    //     HIVE Learn
+    //   </Navbar.Brand>
+    //   <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    //   <div style={{ width: "50%" }}>
+    //     <Navbar.Collapse
+    //       className="justify-content-end me-3"
+    //       id="basic-navbar-nav"
+    //     >
+    //       <Nav
+    //         style={{ float: "right", right: "2px", width: "100%" }}
+    //         className="mr-auto justify-content-between"
+    //       >
+    //         <Nav.Link href="/Resources">Resources</Nav.Link>
+    //         <Nav.Link href="/Biblioteca">Biblioteca</Nav.Link>
+    //         <Nav.Link href="/Learn">Learn</Nav.Link>
+    //         {user ? (
+    //           <div className="d-flex">
+    //             <Nav.Link href={"/Portfolio/"+ localStorage.getItem("username")+ ""}>Profile</Nav.Link>               
+    //             <Image height="40px" roundedCircle src={"https://images.hive.blog/u/" + localStorage.getItem("username") + "/avatar"} />
+    //           </div>
+    //         ) : (
+    //           <Nav.Link onClick={login}>Log in</Nav.Link>
+    //         )}
+    //       </Nav>
+    //     </Navbar.Collapse>
+    //   </div>
+    // </Navbar>
+  );
+}
+
+export default Nava;

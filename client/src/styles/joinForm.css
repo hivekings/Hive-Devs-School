@@ -1,0 +1,138 @@
+.form_main {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  flex-direction: column;
+  top: 3%;
+}
+
+.form_section {
+  /* filter: drop-shadow(0px 4px 4px rgba(255, 0, 0, 0.5)); */
+  border-radius: 25px;
+  width: 91.5%;
+
+  border-style: solid;
+  border-color: #980c0c;
+  border-width: 3px;
+}
+
+.form_section__header1 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 29px;
+  text-align: center;
+  padding-top: 3%;
+  background: linear-gradient(191.94deg, #000000 12.56%, #980c0c 103.02%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.form_section__header2 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 29px;
+  text-align: center;
+  padding-top: 1.25%;
+  padding-bottom: 4%;
+}
+
+.form_leftcol,
+.form_rightcol {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_rightcol {
+  align-items: flex-end;
+}
+
+.form_section__label {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 29px;
+  background: linear-gradient(191.94deg, #000000 12.56%, #980c0c 103.02%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-left: 8%;
+  margin-right: 8%;
+  width: 80%;
+}
+
+.form_section__input {
+  border: 2px solid #000000;
+  filter: drop-shadow(0px 4px 4px #000000);
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 4.2%;
+  margin-bottom: 9%;
+  width: 80%;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 13px;
+  color: #000000;
+}
+
+.form_section__input--small {
+  height: 3.6vh;
+  text-align: left;
+}
+
+.form_section__input--big {
+  height: 12vh;
+  text-align: left;
+  line-height: 1;
+}
+
+.footer_form_screen {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  flex-direction: column;
+}
+
+.footer-form-screen__image {
+  filter: drop-shadow(0px 24px 80px rgba(0, 0, 0, 0.8));
+  border-radius: 8px;
+  margin-left: 4px;
+}
+
+.footer_form_screen__button {
+  background: #ffffff;
+  border: 3px solid #000000;
+  border-radius: 32.5px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 10px;
+  color: #000000;
+  height: 4.8vh;
+  padding: 23px;
+  display: flex;
+  align-items: center;
+}
+
+.lesson-article {
+  font-family: "Futura";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 33px;
+  margin-left:1vw;
+  color: #000000;
+}
