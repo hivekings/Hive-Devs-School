@@ -70,9 +70,7 @@ const Portfolio = () => {
   async function getPosts() {
     const posts = await fetchAccountPosts("posts", params.name, 20);
     console.log(posts);
-    //filter posts that contain the tag "hive-139531"
     const filteredPosts = posts.result.filter(
-      // (post) => post.category === "hive-104341"
       (post) => post.category === "hive-104341"
 
     );
@@ -81,19 +79,6 @@ const Portfolio = () => {
       setPosts(filteredPosts);
     }
   }
-
-  // async function fetchAccountProjects() {
-  //   try {
-  //     const response = await fetch(
-  //       `${process.env.REACT_APP_API_URL}user/${params.name}/projects`
-  //     );
-  //     const json = await response.json();
-  //     console.log(json);
-  //     setPortafolio(json);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }
 
   return (
     <main className="userprofile">

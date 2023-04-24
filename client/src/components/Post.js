@@ -14,11 +14,6 @@ import Markdown from "markdown-to-jsx";
 
 const Post = () => {
   const params = useParams();
-  // const str = params.name;
-  // const initials = str.split(" ").map((word) => word[0]);
-  // const initialsString = initials.reduce((acc, initial) => acc + initial, "");
-
-  // let newString = params.lesson.replace(/\s+/g, "-");
 
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
@@ -66,10 +61,6 @@ const Post = () => {
       return;
     }
 
-
-    // console.log(initials); // Output: ['H', 'W']
-    // console.log(initialsString); // Output: 'HW'
-
     const tagsWithProjectTag = tags.concat([
       
     ]);
@@ -80,9 +71,7 @@ const Post = () => {
       localStorage.getItem("username"),
       title,
       `${value}`,
-      // "Y EL POLLITO PIO",
       "hive-104341",
-      //Creo que aca deberia ir el tag de la categoria principal o sea el tag que linkea a hk university
       "",
       JSON.stringify({
         format: "markdown",
@@ -155,20 +144,7 @@ const Post = () => {
               value={value}
               onChange={onChange}
             />
-            {/* <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Short description:</Form.Label>
-              <Form.Control
-                required
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-                type="string"
-                placeholder="short description about your post"
-              />
-            </Form.Group>
-            <Form.Control.Feedback type="invalid">
-              {description === "" ? "Don't leave this section empty" : ""}
-            </Form.Control.Feedback> */}
-
+    
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <br />
               <div className="tags-box">
@@ -176,36 +152,15 @@ const Post = () => {
                   <ul>
                     {tags.split(" ").map((tag) => {
                       return (
-                        <li key={tag}>
-                          {/* <Badge
-                            style={{ margin: "2px" }}
-                            bg="secondary"
-                            key={tag}
-                            className="text-white"
-                          > */}
+                        <li key={tag}> 
                             {tag}
-                          {/* </Badge> */}
                         </li>
                       );
                     })}
                   </ul>
                 </div>
               <div className="d-flex mt-2">
-                {/* <div>
-                  {tags.split(" ").map((tag) => {
-                    return (
-                      <Badge
-                        style={{ margin: "2px" }}
-                        bg="secondary"
-                        key={tag}
-                        className="text-white"
-                      >
-                        {tag}
-                      </Badge>
-                    );
-                  })}
-                </div>
-                */}
+             
                 <Form.Control
                   required
                   value={tags}

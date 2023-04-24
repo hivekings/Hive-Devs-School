@@ -9,8 +9,6 @@ const Categoria = () => {
   const categoria = params.categoria;
   const [orderBy, setOrderBy] = useState("created");
 
-  
-
   useEffect(() => {
     getPostas();
   }, [orderBy]);
@@ -39,8 +37,8 @@ const Categoria = () => {
   }
 
   const getPostas = async () => {
-    //take the first letter of the skill name
-    const fefe = await fetchRankedPosts(orderBy, categoria, "fefe99"); //'hive-104341 fly awaaaaaay'
+
+    const fefe = await fetchRankedPosts(orderBy, categoria, "fefe99"); 
     console.log(fefe, "fefe");
 
     if (categoria === "introduction") {
@@ -103,8 +101,7 @@ const Categoria = () => {
       <h1 className="section__header">{categoria}</h1>
       <NavDropdown
         title={orderBy}
-        id="basic-nav-dropdown"
-       
+        id="basic-nav-dropdown" 
       >
         <NavDropdown.Item onClick={() => setOrderBy("created")}>
           Created
@@ -115,12 +112,6 @@ const Categoria = () => {
       </NavDropdown>
       {posts.map((post) => (
         <SimmilarPost key={post.id} post={post} />
-    // <div key={post.id}>
-        //   <h3>{post.title}</h3>
-        //   <p>{post.body}</p>
-        //   <p>{post.author}</p>
-        //   <p>{post.created}</p>
-        // </div>
       ))}
     </main>
   );

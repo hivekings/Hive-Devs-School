@@ -5,8 +5,6 @@ import SimmilarPost from "./simmilarPost";
 const Biblioteca = () => {
   
   const [categories, setCategories] = useState([]);
-  // const [posts, setPosts] = useState([])
-
   const [introductionPosts, setIntroductionPosts] = useState([]);
   const [blockchainPosts, setBlockchainPosts] = useState([]);
   const [hivePosts, setHivePosts] = useState([]);
@@ -43,22 +41,14 @@ const Biblioteca = () => {
     }
   }
 
-  // const str = params.name;
-  // const initials = str.split(" ").map((word) => word[0]);
-  // const initialsString = initials.reduce((acc, initial) => acc + initial, "");
-  // console.log(initials); // Output: ['H', 'W']
-  // console.log(initialsString); // Output: 'HW'
 
   const getPostas = async () => {
-    //take the first letter of the skill name
 
     const fefes = await fetchRankedPosts(
       "created",
       `hive-104341`,
       "fefe99"
-    ); //'hive-104341 fly awaaaaaay'
-    // console.log(fefe, "fefe");
-    // const filteredIntroduction = fefes.filter(fefe => fefe.make.includes("Toy") );
+    ); 
     console.log(fefes)
 
     const filteredIntroductionPosts = fefes.result.filter(obj => {
@@ -106,11 +96,6 @@ const Biblioteca = () => {
     setHivePosts(filteredHivePosts);
     setTransactionPosts(filteredTransactionPosts);
     setBuildingPosts(filteredBuildingPosts );
-
-    console.log(introductionPosts)
-    // if (fefes.result.length > 0) {
-    //   setPosts(fefes.result);
-    // }
   };
   
 

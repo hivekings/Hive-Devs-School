@@ -66,7 +66,6 @@ function Nava() {
 
     <Nav  className="navbar">
       <h5 className="navbar__brand"> <Link to="/"><span className="me-1" style={{color:"red"}}>HIVE</span> LEARN</Link> </h5>
-       {/* <img onClick={toggleMenu} src={hamburguer} className="navbar__menu"></img> */}
        <img onClick={toggleMenu2} src={hamburguer} className="navbar__menu" alt="Menu"></img>
       <ul className="navbar__list">
         <li className="navbar__list__listelement"><Link to="/Learn">Learn</Link></li>
@@ -79,7 +78,6 @@ function Nava() {
           <NavDropdown.Item className="" onClick={logOut}>Logout</NavDropdown.Item>
         </NavDropdown>
         }
-        {/* <li>  <Image height="40px" roundedCircle src={"https://images.hive.blog/u/" + localStorage.getItem("username") + "/avatar"} /> {user}</li> */}
       </ul>
       
       {/* Modal */}
@@ -109,41 +107,7 @@ function Nava() {
 
 
     </Nav>
-    //Nav with links to other pages 1 to the right and 3 to the left, the left ones should collapse into a hamburger menu on smaller screens
-    // <Navbar
-    //   className="d-flex justify-content-between "
-    //   expand="lg"
-    //   bg="secondary"
-    //   variant="dark"
-    // >
-    //   <Navbar.Brand className="ms-3" href="/">
-    //     HIVE Learn
-    //   </Navbar.Brand>
-    //   <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    //   <div style={{ width: "50%" }}>
-    //     <Navbar.Collapse
-    //       className="justify-content-end me-3"
-    //       id="basic-navbar-nav"
-    //     >
-    //       <Nav
-    //         style={{ float: "right", right: "2px", width: "100%" }}
-    //         className="mr-auto justify-content-between"
-    //       >
-    //         <Nav.Link href="/Resources">Resources</Nav.Link>
-    //         <Nav.Link href="/Biblioteca">Biblioteca</Nav.Link>
-    //         <Nav.Link href="/Learn">Learn</Nav.Link>
-    //         {user ? (
-    //           <div className="d-flex">
-    //             <Nav.Link href={"/Portfolio/"+ localStorage.getItem("username")+ ""}>Profile</Nav.Link>               
-    //             <Image height="40px" roundedCircle src={"https://images.hive.blog/u/" + localStorage.getItem("username") + "/avatar"} />
-    //           </div>
-    //         ) : (
-    //           <Nav.Link onClick={login}>Log in</Nav.Link>
-    //         )}
-    //       </Nav>
-    //     </Navbar.Collapse>
-    //   </div>
-    // </Navbar>
+
   );
 }
 

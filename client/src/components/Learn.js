@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -35,7 +34,6 @@ const Learn = () => {
         {data.map((skill) => (
           
           <li className="d-flex skill" key={skill._id}>
-            {/* <Link to={skill.title}> */}
             <Image className="skill__image" src={skill.image} />
             <div>
             <Link to={skill.title}><h3 className="skill__title">{skill.title}</h3></Link>
@@ -43,23 +41,10 @@ const Learn = () => {
             <footer>
             </footer>
             </div>
-            {/* </Link> */}
           </li>
          
         ))}
-
-        {/* {data.map((skill) => (
-          <Col key={skill._id}>
-            <Link to={skill.title}>
-              <Image height="250" width="250" roundedCircle src={skill.image} />
-              <h4  className="mt-3">{skill.title}</h4>
-            </Link>
-          </Col>
-        ))} */}
       </section>
-{/* 
-     <div dangerouslySetInnerHTML={{ __html: data }} /> */}
-
     </main>
   );
 };

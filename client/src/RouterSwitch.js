@@ -15,8 +15,6 @@ import Categoria from './components/Categoria'
 import JoinForm from './components/JoinForm';
 import KnowAboutHive from './components/KnowAboutHive';
 
-import {useLocation} from 'react-router-dom'
-
 
 function RouterSwitch() {
   const currentPath = window.location.pathname;

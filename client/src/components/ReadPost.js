@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 //React Bootstrap
-import Button from "react-bootstrap/Button";
 import Badge from "react-bootstrap/Badge";
 import Image from "react-bootstrap/Image";
 

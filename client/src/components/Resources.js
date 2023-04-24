@@ -1,32 +1,10 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Nava from "./Nav";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
 import debounce from 'lodash/debounce'; // Import debounce from a utility library like lodash
-
-// const SearchBar = () => {
-//   const [searchQuery, setSearchQuery] = useState('');
-  
-
-//   return (
-//     <div>
-//       <input
-//         type="text"
-//         value={searchQuery}
-//         onChange={handleSearchQueryChange}
-//         placeholder="Search..."
-//       />
-//       {/* Render search results */}
-//     </div>
-//   );
-// };
-
-
-
 
 const Resources = () => {
   const [skills, setSkills] = useState([]);
