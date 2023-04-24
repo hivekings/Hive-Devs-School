@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
-//get params from url
 import { useParams } from "react-router-dom";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
 import tick from "../images/tick.svg";
-import star from "../images/star_rate.svg";
 
 const Skill = () => {
   const paramms = useParams();
