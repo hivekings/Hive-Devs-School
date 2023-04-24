@@ -306,6 +306,10 @@ h1 {
   list-style-type: none;
 }
 
+.keychain {
+  cursor: pointer;
+}
+
 .navbar__list__listelement--image {
   
   background: #ffffff;

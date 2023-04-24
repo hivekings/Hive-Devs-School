@@ -115,21 +115,15 @@ const Lesson = () => {
     }
   }
 
-  // const str = params.name;
-  // const initials = str.split(" ").map((word) => word[0]);
-  // const initialsString = initials.reduce((acc, initial) => acc + initial, "");
-  // console.log(initials); // Output: ['H', 'W']
-  // console.log(initialsString); // Output: 'HW'
 
   const getPostas = async () => {
-    //take the first letter of the skill name
 
     const fefe = await fetchRankedPosts(
       "created",
       `hku-${data.hiveTag}`,
       "fefe99"
-    ); //'hive-104341 fly awaaaaaay'
-    // console.log(fefe, "fefe");
+    ); //hive-104341 
+
     if (fefe.result.length > 0) {
       setPosts(fefe.result);
     }

@@ -33,6 +33,7 @@ function Nava() {
 
   function logOut() {
     localStorage.removeItem("username");
+    window.location.reload()
   }
 
   function toggleMenu() {
@@ -73,7 +74,7 @@ function Nava() {
         <li className="navbar__list__listelement"><Link to="/biblioteca">Library</Link></li>
         <li className="navbar__list__listelement"><a href="https://discord.com/channels/1004483228561834074/1004483229476200621"> Get Involved </a> </li>
        { !user ?  
-       (<li onClick={login} className="navbar__list__listelement navbar__list__listelement--image" ><img src={fefeas}></img>Connect Wallet</li>) :
+       (<li onClick={login} className="navbar__list__listelement keychain navbar__list__listelement--image" ><img src={fefeas}></img>Connect Wallet</li>) :
         <NavDropdown className="navbar__list__listelement" title={<><Image height="40px" roundedCircle src={"https://images.hive.blog/u/" + user + "/avatar"} /> <Link to={"/portfolio/"+ user}>{user}</Link></>} id="basic-nav-dropdown">
           <NavDropdown.Item className="" onClick={logOut}>Logout</NavDropdown.Item>
         </NavDropdown>
@@ -92,7 +93,7 @@ function Nava() {
               <li className="modal__list__listelement"><a href="/biblioteca">Library</a></li>
               <li className="modal__list__listelement"><a href="https://discord.com/channels/1004483228561834074/1004483229476200621">Get Involved</a></li>
               {!user ? (
-                <li className="modal__list__listelement" onClick={login}><img src={fefeas} alt="Connect Wallet" /> Connect Wallet</li>
+                <li className="modal__list__listelement keychain"  onClick={login}><img src={fefeas}  alt="Connect Wallet" /> Connect Wallet</li>
               ) : (
                 <li className="modal__list__listelement--image">
                   <img height="40px" src={`https://images.hive.blog/u/${user}/avatar`} alt="Profile Avatar" />
