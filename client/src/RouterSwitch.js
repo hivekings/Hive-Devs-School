@@ -26,13 +26,13 @@ function RouterSwitch() {
     {/* {  currentPath!=="/join"  && currentPath!=="/Join" && <Nava/> }  */}
     <Nava/>
     <Routes>
-      <Route path="/" element={<Welcome />} />
+      <Route path="/home" element={<Welcome />} />
       <Route path="/learn" element={<Learn />} />
       <Route path= "/learn/:name" element={<Skill/>} />
       <Route path= "/learn/:name/:lesson" element={<Lesson/>} />
       <Route path= "/learn/:name/:lesson/post/:tag" element={<Post/>} />
       <Route path="/resources" element={<Resources />} />
-      <Route path="*" element={<h1>404 Not Found</h1>} />
+      {/* <Route path="*" element={<h1>404 Not Found</h1>} /> */}
       <Route path="/profile/:name" element={<Portfolio/>} />
       <Route path="/biblioteca" element={<Biblioteca/>} />
       <Route path="/biblioteca/:categoria" element={<Categoria/>} />

@@ -14,7 +14,7 @@ const Learn = () => {
       const fetchData = async () => {
         console.log("/")
         // const result = await fetch(process.env.REACT_APP_API_URL);
-        const result = await fetch(`/api`);
+        const result = await fetch(`/api/`);
 
         console.log(process.env.REACT_APP_API_URL)
         const body = await result.json();
