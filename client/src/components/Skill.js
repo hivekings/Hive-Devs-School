@@ -15,7 +15,6 @@ const Skill = () => {
       );
       // read body as html and not json
       const body = await result.json();
-      console.log(body);
       setData(body);
       setTitle(body.course.title);
       setDescription(body.course.description);
@@ -41,7 +40,7 @@ const Skill = () => {
     const body = await result.json();
     //add id to tracksCompleted
     setTracksCompleted([...tracksCompleted, id]);
-    console.log(body);
+
   };
 
   const removeTrack = async (id) => {
@@ -57,7 +56,7 @@ const Skill = () => {
     //remove id from tracksCompleted
     setTracksCompleted(tracksCompleted.filter((track) => track !== id));
     const body = await result.json();
-    console.log(body);
+
   };
 
   const completeLesson = async (id) => {
@@ -76,7 +75,7 @@ const Skill = () => {
     const body = await result.json();
     //add id to lessonsCompleted
     setLessonsCompleted([...lessonsCompleted, id]);
-    console.log(body);
+
   };
 
   const removeLesson = async (id) => {
@@ -95,7 +94,7 @@ const Skill = () => {
     const body = await result.json();
     //remove id from lessonsCompleted
     setLessonsCompleted(lessonsCompleted.filter((lesson) => lesson !== id));
-    console.log(body);
+
   };
 
   const fetchUser = async () => {
@@ -106,8 +105,6 @@ const Skill = () => {
       `${process.env.REACT_APP_API_URL}user/${localStorage.getItem("username")}`
     );
     const body = await result.json();
-    console.log("hola");
-    console.log(body.lessonsCompleted);
     if (body.lessonsCompleted) {
       setLessonsCompleted(body.lessonsCompleted);
     }
@@ -117,7 +114,6 @@ const Skill = () => {
     // filter tracks
     for (let track of tracks) {
       const lessonsInTrack = track.lessons.length;
-      console.log(lessonsInTrack);
       let i = 0;
       if (tracksCompleted.includes(track._id)) {
         continue;
@@ -127,7 +123,6 @@ const Skill = () => {
           i++;
         }
         if (i === lessonsInTrack) {
-          console.log("completado");
           completeTrack(track._id);
         }
       });

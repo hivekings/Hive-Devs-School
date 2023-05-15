@@ -1,15 +1,15 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 require("dotenv").config();
 const cors = require("cors");
 
-var indexRouter = require('./routes/index');
+const indexRouter = require('./routes/index');
 
 
-var app = express();
+const app = express();
 
 const mongoose = require("mongoose");
 const mongoDB = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.h2hovfp.mongodb.net/HiveDevs?retryWrites=true&w=majority`

@@ -9,14 +9,14 @@ import "../styles/welcomeV2.css";
 
 
 const Welcome = () => {
-  const location = useLocation();
+  // const location = useLocation();
 
-  useEffect(() => {
-    if (location.pathname === '/') {
-      var element = document.getElementsByClassName("secondary-footer")[0];
-      element.style.display = "none";
-    }
-  }, [location]);
+  // useEffect(() => {
+  //   if (location.pathname === '/') {
+  //     var element = document.getElementsByClassName("secondary-footer")[0];
+  //     element.style.display = "none";
+  //   }
+  // }, [location]);
 
   return (
     <Row as="main">
@@ -40,10 +40,10 @@ const Welcome = () => {
           <button className="rightsection__button">START NOW</button>
         </Link>
       </Col>
-      <footer className="footer">
+      {/* <footer className="footer">
         
         <img src="https://i.imgur.com/IQqpoU2.jpg" alt="Footer Logo" />
-      </footer>
+      </footer> */}
     </Row> 
   );
 };

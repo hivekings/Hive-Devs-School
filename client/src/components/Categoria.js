@@ -39,7 +39,6 @@ const Categoria = () => {
   const getPostas = async () => {
 
     const fefe = await fetchRankedPosts(orderBy, categoria, "fefe99"); 
-    console.log(fefe, "fefe");
 
     if (categoria === "introduction") {
 

@@ -47,9 +47,8 @@ const Biblioteca = () => {
     const fefes = await fetchRankedPosts(
       "created",
       `hive-104341`,
-      "fefe99"
+      localStorage.getItem('username') || ""
     ); 
-    console.log(fefes)
 
     const filteredIntroductionPosts = fefes.result.filter(obj => {
       const tags = obj.json_metadata.tags;
@@ -101,9 +100,9 @@ const Biblioteca = () => {
 
   const fetchCategories = async () => {
     const result = await fetch(process.env.REACT_APP_API_URL);
-    console.log(process.env.REACT_APP_API_URL);
+
     const categories = await result.json();
-    console.log(categories);
+
     setCategories(categories);
   };
 

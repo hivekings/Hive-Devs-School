@@ -19,9 +19,6 @@ const Lesson = () => {
   const [projects, setProjects] = useState([]);
 
 
-
-  console.log(data.hiveTag)
-
   useEffect(() => {
     const fetchData = async () => {
       const result = await fetch(
@@ -29,7 +26,7 @@ const Lesson = () => {
       );
       // read body as html and not json
       const body = await result.json();
-      // console.log(body);
+
       setData(body.lesson);
       setExplanation(body.lesson.explanation);
       if (body.resources !== null) {

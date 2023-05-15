@@ -15,7 +15,6 @@ const Resources = () => {
     const fetchData = setTimeout(async () => {
       const result = await fetch(`${process.env.REACT_APP_API_URL}resource?title=${resourceTitle}`);
       const body = await result.json();
-      console.log(body);
       setSkills(body);
     }, 1000);
     return () => clearTimeout(fetchData);

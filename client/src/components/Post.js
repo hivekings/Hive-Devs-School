@@ -65,7 +65,7 @@ const Post = () => {
       
     ]);
 
-    console.log(tagsWithProjectTag);
+
 
     keychain.requestPost(
       localStorage.getItem("username"),
@@ -96,7 +96,7 @@ const Post = () => {
     );
   }
   const onChange = useCallback((value) => {
-    console.log(value);
+
     setValue(value);
   }, []);
 

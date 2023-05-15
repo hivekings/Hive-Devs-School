@@ -25,22 +25,21 @@ const Portfolio = () => {
   const fetchUser = async () => {
     const result = await fetch(`${process.env.REACT_APP_API_URL}user/${params.name}`);
     const user = await result.json();
-    console.log(user);
+
     setUser(user);
     if (user.lessonsCompleted !== null) {
       setLessons(user.lessonsCompleted);
     }
 
     setTracksCompleted(user.trackCompleted);
-    console.log(tracksCompleted);
-    console.log(skills[0].tracks[0]);
+
   };
 
   const fetchData = async () => {
     const result = await fetch(process.env.REACT_APP_API_URL);
     // read body as html and not json
     const body = await result.json();
-    console.log(body);
+
     setSkills(body);
   };
 
@@ -69,12 +68,12 @@ const Portfolio = () => {
 
   async function getPosts() {
     const posts = await fetchAccountPosts("posts", params.name, 20);
-    console.log(posts);
+
     const filteredPosts = posts.result.filter(
       (post) => post.category === "hive-104341"
 
     );
-    console.log(filteredPosts);
+
     if (filteredPosts.length > 0) {
       setPosts(filteredPosts);
     }

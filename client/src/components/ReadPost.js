@@ -53,19 +53,19 @@ const PostSite = () => {
   }, []);
 
   function VideoRenderer(props) {
-    // console.log(props);
+
     const { children } = props;
     if (!children || !children[1]) return <center {...props} />; // if there are no children return the default link
     const videoUrl = children[1].props.href;
     // const videoUrl = children[1].props.href.children[0].props.src;
-    console.log(videoUrl);
+
     if (!videoUrl.match(/3speak\.tv\/watch/)) return <center {...props} />; // if it's not a video return the default link
     var oldUrl = videoUrl;
     var newUrl = oldUrl.replace(
       /^https:\/\/3speak.tv\/watch\?v=/g,
       "https://3speak.tv/embed?v="
     );
-    console.log(newUrl); // if it's not a video return the default link
+
 
     return (
       <center>
@@ -99,7 +99,7 @@ const PostSite = () => {
         }),
       });
       const data = await response.json();
-      console.log(data);
+
       setBody(data.result.body);
       setPost(data.result);
       setTags(data.result.json_metadata.tags);
@@ -208,7 +208,7 @@ const PostSite = () => {
       });
       const data = await response.json();
       let result = data.result;
-      console.log(result);
+
       let discussion = convertData(result);
 
       function convertData(data) {

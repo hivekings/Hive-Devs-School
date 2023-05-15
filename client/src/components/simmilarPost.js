@@ -14,7 +14,6 @@ function removeHBDAndLastDecimal(str) {
 }
 
 const SimmilarPost = ({ post }) => {
-  console.log(post);
   return (
     <article className="similar-post">
       <main>

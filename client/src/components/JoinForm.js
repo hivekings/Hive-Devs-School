@@ -27,7 +27,7 @@ async function postUser(
     body: JSON.stringify(data),
   });
   const body = await response.json();
-  console.log(body);
+
 }
 
 
