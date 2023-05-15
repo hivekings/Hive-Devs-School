@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-import debounce from 'lodash/debounce'; // Import debounce from a utility library like lodash
-
 const Resources = () => {
   const [skills, setSkills] = useState([]);
   const [resourceTitle, setResourceTitle] = useState("");

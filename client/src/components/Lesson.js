@@ -15,7 +15,6 @@ const Lesson = () => {
   const [lessonCompleted, setLessonCompleted] = useState(false);
   const [id, setId] = useState("");
   const [posts, setPosts] = useState([]);
-  // const [showPosts, setShowPosts] = useState(false);
   const [projects, setProjects] = useState([]);
 
 

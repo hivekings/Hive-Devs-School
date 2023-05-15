@@ -5,9 +5,11 @@ import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+
 const Learn = () => {
   //fetch request to get the data from the server
    const [data, setData] = useState([]);
+
    useEffect(() => {
       const fetchData = async () => {
         const result = await fetch(process.env.REACT_APP_API_URL);
@@ -17,6 +19,7 @@ const Learn = () => {
       };
       fetchData();
     }, []);
+
   return (
     <main className="text-center maina-variaton">
       <h1 className="learn-title"><b><span style={{color:"white"}}>HIVE</span> <span style={{color:"red"}}>LEARN</span></b></h1>

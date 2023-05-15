@@ -137,10 +137,12 @@ const Skill = () => {
   return (
     <main className="maina">
       {/* <div className="d-flex mb-3"> */}
+      <div>
       <Link to="/learn/">
-      <img width="36" src="https://i.imgur.com/Zry8heK.png" alt="back to skill" />
+      <img style={{marginLeft:"-4%"}} width="36" src="https://i.imgur.com/Zry8heK.png" alt="back to skill" />
       </Link>
-      <h1 style={{}} className="learn__header2">
+      </div>
+      <h1 style={{marginLeft:"1%"}} className="learn__header2">
         {title}
       </h1>
       <p className="maina-skill__description">{description}</p>

@@ -18,9 +18,7 @@ const Portfolio = () => {
   const [lessons, setLessons] = useState([]);
   const [tracksCompleted, setTracksCompleted] = useState([]);
   const [posts, setPosts] = useState([]);
-  const [showPosts, setShowPosts] = useState(false);
-  const [portafolio, setPortafolio] = useState([]);
-  const [showPortafolio, setShowPortafolio] = useState(false);
+
 
   const fetchUser = async () => {
     const result = await fetch(`${process.env.REACT_APP_API_URL}user/${params.name}`);
@@ -110,129 +108,12 @@ const Portfolio = () => {
             </Row>
         </Col>
       </Row>
-
-      {/* 
-      <Row className="m-4">
-        <Col className="m-2 align-middle text-center" md="auto" style={{}}>
-          <Figure>
-            <Figure.Image
-              width={155}
-              height={155}
-              style={{ borderRadius: "100px" }}
-              alt="171x180"
-              src={"https://images.hive.blog/u/" + params.name + "/avatar"}
-            />
-          </Figure>
-        </Col>
-
-        <Col>
-          <h3>{params.name}</h3>
-          <ListGroup variant="flush">
-            <ListGroup.Item>
-              {"Lessons Completed:  " + lessons.length}
-            </ListGroup.Item>
-            <ListGroup.Item>{"Minutes of Learning:  "}</ListGroup.Item>
-
-            <ListGroup.Item>
-              {user.trackCompleted
-                ? "Sections Completed:  " + user.trackCompleted.length
-                : "Sections Completed:  " + 0}
-            </ListGroup.Item>
-          </ListGroup>
-        </Col>
-        <h3>Stats:</h3>
-        <ul className="lightTitle">
-          {skills.map((skill) => {
-            return (
-              <li className="d-flex align-items-center" key={skill.id}>
-                <Link to={"/learn/" + skill.name}>
-                  <h5>{skill.title}</h5>
-                </Link>
-                <div className="d-flex align-items-center">
-                  {skill.tracks.map((track) => {
-                    return (
-                      <div
-                        style={{ fontSize: "1rem" }}
-                        className={
-                          tracksCompleted.includes(track)
-                            ? "five-pointed-star-completed"
-                            : "five-pointed-star"
-                        }
-                      ></div>
-                    );
-                  })}
-                </div>
-              </li>
-            );
-          })}
-        </ul>
-      </Row>
-      <div className="d-flex flex-column align-items-center">
-       
-        <h3
-          style={{ width: "60%" }}
-          className="lightTitle p-4 mb-3 text-center"
-        >
-          Portafolio
-          {showPortafolio ? (
-            <a
-              onClick={() => {
-                setShowPortafolio(false);
-              }}
-              className="h5 load"
-            >
-              (Close)
-            </a>
-          ) : (
-            <a
-              onClick={() => {
-                setShowPortafolio(true);
-                fetchAccountProjects();
-              }}
-              className="h5 load"
-            >
-              (Load)
-            </a>
-          )}
-          <br></br>
-        </h3>
-
-        {showPortafolio
-          ? portafolio.map((project) => {
-              return (
-                <div style={{ width: "95%" }} className="me-5 mb-3">
-                  <Card border="secondary">
-                    <Card.Header>{}</Card.Header>
-                    <Card.Body>
-                      <Card.Title>{project.userName}</Card.Title>
-                      <a href={project.linkToCode}>
-                        <Button>Code</Button>
-                      </a>
-                      <a href={project.linkToDemo}>
-                        <Button>Live</Button>
-                      </a>
-                    </Card.Body>
-                  </Card>
-                </div>
-              );
-            })
-          : null}
-      </div> */}
       <section className="projects-section">
         <h2 className="projects-section__header"> PROJECTS PORTFOLIO </h2>
         {posts.map((post) => (
           <SimmilarPost key={post._id} post={post} />
         ))}
       </section>
-      {/* <footer className="secondary-footer">
-        <h5 className="secondary-footer__brand">HIVE LEARN</h5>
-        <img src="https://i.imgur.com/IQqpoU2.jpg" alt="Footer Logo" />
-        <ul className="secondary-footer__link-list">
-          <li className="secondary-footer__link-list-element"><img width="54px" src="https://i.imgur.com/Td8nOw7.png" alt="" /></li>
-          <li className="secondary-footer__link-list-element"><img width="54px" src="https://i.imgur.com/JLJVz3t.png" alt="" /></li>
-
-        </ul>
-      </footer> */}
     </main>
   );
 };

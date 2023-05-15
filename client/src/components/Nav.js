@@ -101,7 +101,6 @@ function Nava() {
                 </li>
               )}
             </ul>
-            {/* Add your modal content here */}
         </div>
       )}
 

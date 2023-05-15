@@ -40,10 +40,6 @@ const Welcome = () => {
           <button className="rightsection__button">START NOW</button>
         </Link>
       </Col>
-      {/* <footer className="footer">
-        
-        <img src="https://i.imgur.com/IQqpoU2.jpg" alt="Footer Logo" />
-      </footer> */}
     </Row> 
   );
 };
