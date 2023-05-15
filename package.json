@@ -3,8 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "client": "cd client && yarn start",
+    "server": "nodemon ./bin/www",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "dev:server": "cd client && yarn build && cd .. && yarn start",
     "start": "node ./bin/www",
-    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
