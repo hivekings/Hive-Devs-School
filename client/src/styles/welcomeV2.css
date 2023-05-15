@@ -1263,7 +1263,15 @@ h1 {
   color: #1e50ff;
   display: block;
   margin-bottom: 16px;
+  text-decoration: none;
 }
+
+.similar-post__author:hover {
+  text-decoration: underline;
+  text-decoration-color: #1e50ff;
+}
+
+
 
 .similar-post__description {
   font-family: "Raleway", sans-serif;
@@ -1409,3 +1417,5 @@ h1 {
 .navbar a:hover {
   color: #c70000;
 }
+
+

@@ -1,4 +1,5 @@
 import heart from "../images/heart.svg";
+import { Link } from "react-router-dom";
 
 function removeHBDAndLastDecimal(str) {
   // Remove "HBD" from the string
@@ -24,7 +25,7 @@ const SimmilarPost = ({ post }) => {
           ></img>
         )}
         <div className="magic-div">
-        <h4 className="similar-post__title"><b>{post.title}</b></h4>
+        <Link className="links" to={"/biblioteca/" + post.author + "/" + post.permlink}><h4 className="similar-post__title"><b>{post.title}</b></h4></Link>
         <a className="similar-post__author" href={"/profile/" + post.author}>
           <span>{"By"}</span> <b>{post.author}</b>
         </a>

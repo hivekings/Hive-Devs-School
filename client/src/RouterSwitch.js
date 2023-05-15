@@ -1,5 +1,5 @@
 import './styles/App.css';
-import { BrowserRouter, Routes, Route, Link, redirect } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nava from './components/Nav';
 import Learn from './components/Learn'
 import Skill from './components/Skill'
@@ -34,7 +34,7 @@ function RouterSwitch() {
       <Route path= "/learn/:name/:lesson/post/:tag" element={<Post/>} />
       <Route path="/resources" element={<Resources />} />
       <Route path="*" element={<h1>404 Not Found</h1>} />
-      <Route path="/portfolio/:name" element={<Portfolio/>} />
+      <Route path="/profile/:name" element={<Portfolio/>} />
       <Route path="/biblioteca" element={<Biblioteca/>} />
       <Route path="/biblioteca/:categoria" element={<Categoria/>} />
       <Route path="/biblioteca/@:author/:permlink" element={<ReadPost/>} />

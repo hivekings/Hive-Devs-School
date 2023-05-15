@@ -37,3 +37,11 @@
   }
 }
 
+.links {
+  text-decoration: none;
+}
+
+.links:hover{
+  text-decoration: underline;
+  text-decoration-color: red;
+}
