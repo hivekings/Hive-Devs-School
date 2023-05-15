@@ -15,7 +15,7 @@ import Markdown from "markdown-to-jsx";
 // Time Ago
 import moment from "moment";
 
-import "./image.css";
+import "../styles/image.css";
 
 //Components
 import ReplyMarkdown from "./ReplyMarkdown";
