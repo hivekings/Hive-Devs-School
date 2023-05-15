@@ -17,7 +17,7 @@ mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
-
+console.log(process.env.PORT)
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -34,7 +34,33 @@ app.use(
   })
 );
 
-app.use('/', indexRouter);
+app.use('/api/', indexRouter);
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "/client/build")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
+}
+
+// const allowedOrigins = ['http://localhost:3000', 'http://localhost:5000'];
+
+// app.use(
+//   cors({
+//     origin: function (origin, callback) {
+//       // Check if the origin is in the allowed origins list
+//       if (!origin || allowedOrigins.includes(origin)) {
+//         callback(null, true);
+//       } else {
+//         callback(new Error('Not allowed by CORS'));
+//       }
+//     },
+//   })
+// );
+
+
+
 
 
 // catch 404 and forward to error handler

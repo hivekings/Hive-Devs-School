@@ -18,7 +18,6 @@ import KnowAboutHive from './components/KnowAboutHive';
 
 function RouterSwitch() {
   const currentPath = window.location.pathname;
-
   
   console.log(currentPath)
   return (
