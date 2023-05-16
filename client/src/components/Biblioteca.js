@@ -108,7 +108,7 @@ const Biblioteca = () => {
 
   return (
     <main className="maina">
-      <h1 className="main__header" style={{color:"white"}}>Library</h1>
+      <h1 className="main__header text-uppercase" style={{color:"white"}}>Library</h1>
       <section className="resources__section">
       <ul className="resources__list">
         {categories.map((category) => (
