@@ -19,7 +19,7 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 console.log(process.env.PORT)
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+// app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use(logger('dev'));
@@ -28,8 +28,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 
+// app.get('*', function(req, res) {
+//   res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+// });
+
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '/client/build/', 'index.html'));
 });
 
 app.use(

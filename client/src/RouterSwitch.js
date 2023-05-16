@@ -26,7 +26,7 @@ function RouterSwitch() {
     {/* {  currentPath!=="/join"  && currentPath!=="/Join" && <Nava/> }  */}
     <Nava/>
     <Routes>
-      <Route path="/home" element={<Welcome />} />
+      <Route path="/" element={<Welcome />} />
       <Route path="/learn" element={<Learn />} />
       <Route path= "/learn/:name" element={<Skill/>} />
       <Route path= "/learn/:name/:lesson" element={<Lesson/>} />
