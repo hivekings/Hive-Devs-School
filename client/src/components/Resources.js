@@ -11,7 +11,7 @@ const Resources = () => {
   
   useEffect(() => {
     const fetchData = setTimeout(async () => {
-      const result = await fetch(`${process.env.REACT_APP_API_URL}resource?title=${resourceTitle}`);
+      const result = await fetch(`/api/resource?title=${resourceTitle}`);
       const body = await result.json();
       setSkills(body);
     }, 1000);

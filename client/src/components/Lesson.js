@@ -21,7 +21,7 @@ const Lesson = () => {
   useEffect(() => {
     const fetchData = async () => {
       const result = await fetch(
-        `${process.env.REACT_APP_API_URL}lesson/${params.lesson}`
+        `/api/lesson/${params.lesson}`
       );
       // read body as html and not json
       const body = await result.json();

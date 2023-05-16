@@ -99,7 +99,7 @@ const Biblioteca = () => {
   
 
   const fetchCategories = async () => {
-    const result = await fetch(process.env.REACT_APP_API_URL);
+    const result = await fetch('/api/');
 
     const categories = await result.json();
 

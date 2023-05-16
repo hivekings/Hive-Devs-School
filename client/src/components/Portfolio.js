@@ -21,7 +21,7 @@ const Portfolio = () => {
 
 
   const fetchUser = async () => {
-    const result = await fetch(`${process.env.REACT_APP_API_URL}user/${params.name}`);
+    const result = await fetch(`/api/user/${params.name}`);
     const user = await result.json();
 
     setUser(user);
@@ -34,7 +34,7 @@ const Portfolio = () => {
   };
 
   const fetchData = async () => {
-    const result = await fetch(process.env.REACT_APP_API_URL);
+    const result = await fetch('/api/');
     // read body as html and not json
     const body = await result.json();
 

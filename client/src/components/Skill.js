@@ -11,7 +11,7 @@ const Skill = () => {
   useEffect(() => {
     const fetchData = async () => {
       const result = await fetch(
-        `${process.env.REACT_APP_API_URL}course/${paramms.name}`
+        `/api/course/${paramms.name}`
       );
       // read body as html and not json
       const body = await result.json();
@@ -26,7 +26,7 @@ const Skill = () => {
 
   const completeTrack = async (id) => {
     const result = await fetch(
-      `${process.env.REACT_APP_API_URL}user/${id}/trackCompleted`,
+      `/api/user/${id}/trackCompleted`,
       {
         method: "PATCH",
         headers: {
@@ -44,7 +44,7 @@ const Skill = () => {
   };
 
   const removeTrack = async (id) => {
-    const result = await fetch(`${process.env.REACT_APP_API_URL}user/${id}/removeTrack`, {
+    const result = await fetch(`/api/user/${id}/removeTrack`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -61,7 +61,7 @@ const Skill = () => {
 
   const completeLesson = async (id) => {
     const result = await fetch(
-      `${process.env.REACT_APP_API_URL}user/${id}/lessonCompleted`,
+      `/api/user/${id}/lessonCompleted`,
       {
         method: "PATCH",
         headers: {
@@ -80,7 +80,7 @@ const Skill = () => {
 
   const removeLesson = async (id) => {
     const result = await fetch(
-      `${process.env.REACT_APP_API_URL}user/${id}/removeLesson`,
+      `/api/user/${id}/removeLesson`,
       {
         method: "PATCH",
         headers: {
@@ -102,7 +102,7 @@ const Skill = () => {
       return;
     }
     const result = await fetch(
-      `${process.env.REACT_APP_API_URL}user/${localStorage.getItem("username")}`
+      `/api/user/${localStorage.getItem("username")}`
     );
     const body = await result.json();
     if (body.lessonsCompleted) {
