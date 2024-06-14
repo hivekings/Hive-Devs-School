@@ -12,6 +12,7 @@ const indexRouter = require('./routes/index');
 const app = express();
 
 const mongoose = require("mongoose");
+// const mongoDB = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.zagjwrg.mongodb.net/HiveDevs?retryWrites=true&w=majority`
 const mongoDB = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.h2hovfp.mongodb.net/HiveDevs?retryWrites=true&w=majority`
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
