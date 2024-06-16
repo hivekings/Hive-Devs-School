@@ -137,3 +137,6 @@ hivepay.js
 fefe.html
 test.js
 .vercel
+
+# Local Netlify folder
+.netlify
