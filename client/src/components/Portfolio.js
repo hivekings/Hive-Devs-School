@@ -98,7 +98,7 @@ const Portfolio = () => {
           </ul>
         </Col>
         <Col md={5} as="aside" className="studentlinks">
-            <h5 className="studentlinks__header">My Links</h5>
+            <h3 className="studentlinks__header">My Links</h3>
             <Row as="ul" className="studentlinks__list">
               <Col as="li" alt="link to github" className="studentlinks__list-element"><img width="55px" src="https://i.imgur.com/mXEt6ma.png" alt="" /></Col>
               <Col as="li" alt="link to hive" className="studentlinks__list-element"><img width="55px" src="https://i.imgur.com/6hi1upx.png" alt="" /></Col>
