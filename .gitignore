@@ -132,6 +132,9 @@ populate.js
 hive.js
 hivepay.js
 
+Dockerfile
+fly.toml
+.dockerignore
 
 #lessons
 fefe.html
