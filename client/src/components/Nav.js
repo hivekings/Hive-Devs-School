@@ -99,7 +99,7 @@ function Nava() {
             onClick={login}
             className="navbar__list__listelement keychain navbar__list__listelement--image"
           >
-            <img src={fefeas}></img>Connect Wallet
+            <img alt="keychain_image" src={fefeas}></img>Connect Wallet
           </li>
         ) : (
           <NavDropdown
@@ -107,6 +107,7 @@ function Nava() {
             title={
               <>
                 <Image
+                  alt="user avatar"
                   height="40px"
                   roundedCircle
                   src={"https://images.hive.blog/u/" + user + "/avatar"}
@@ -140,7 +141,7 @@ function Nava() {
                 </Link>{" "}
               </h5>
               <li style={{marginTop:"-10px"}} onClick={() => setIsMenuOpen(false)}>
-                <img width="40px" src={closebtn} />
+                <img alt="close_btn" width="40px" src={closebtn} />
               </li>
             </li>
             <li className="modal__list__listelement ">
@@ -164,10 +165,11 @@ function Nava() {
             ) : (
               <li className="modal__list__listelement--image">
                 <img
+                  alt="Profile Avatar"
                   className="ms-2"
                   height="40px"
                   src={`https://images.hive.blog/u/${user}/avatar`}
-                  alt="Profile Avatar"
+                  
                 />
                 <a href={`/portfolio/${user}`}>{user}</a>
               </li>

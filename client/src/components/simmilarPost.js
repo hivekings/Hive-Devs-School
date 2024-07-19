@@ -20,6 +20,7 @@ const SimmilarPost = ({ post }) => {
       <main>
         {post.json_metadata && post.json_metadata.image[0] && (
           <img
+            alt="image of a similar post"
             className="similar-post__image"
             src={post.json_metadata.image[0]}
           ></img>
@@ -38,7 +39,7 @@ const SimmilarPost = ({ post }) => {
         </span>
         <div className="d-flex flex-row">
         <div id="heart" className="comment__heart">
-          <img src={heart}></img>
+          <img alt="image of a heart to decorate the amount of people that liked the post" src={heart}></img>
          { post.active_votes && <span>{post.active_votes.length}</span>}
         </div>
         {post.pending_payout_value && <span className="comment__payout similar-post__pending">$ {removeHBDAndLastDecimal(post.pending_payout_value)}</span>}

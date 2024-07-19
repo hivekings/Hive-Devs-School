@@ -17,15 +17,19 @@ const Welcome = () => {
   //     element.style.display = "none";
   //   }
   // }, [location]);
-
   return (
     <Row as="main">
-      <img src="https://i.imgur.com/tLKx5Ea.jpg"></img>
+      <img alt="logo" src="https://i.ibb.co/hV7xFZf/t-LKx5-Ea-1.webp"></img>
       <Col md={6} as="section">
         <img
+          preload="true"
+          fetchPriority="high"
           className="leftsection__image"
-          src="https://i.imgur.com/1mTr1oo.jpg"
-          alt="Image description"
+          src="https://i.ibb.co/rGGxsFm/1m-Tr1oo-2.webp"
+          alt="decorative image"
+          // max-width="100px"
+          // max-height="500px"
+          width="90%"
         />
       </Col>
       <Col className="rightsection" md={6} as="section">

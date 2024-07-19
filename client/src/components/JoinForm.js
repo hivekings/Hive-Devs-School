@@ -173,7 +173,7 @@ const JoinForm = () => {
       <footer className="footer_form_screen">
         <button onClick={createUser} className="footer_form_screen__button">
           Login
-          <img className="footer-form-screen__image" width="32px" height="35px" src="https://i.imgur.com/gZ0rZ14.png"></img>
+          <img alt="keychain" className="footer-form-screen__image" width="32px" height="35px" src="https://i.imgur.com/gZ0rZ14.png"></img>
         </button>
       </footer>
     </main>

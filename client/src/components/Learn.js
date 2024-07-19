@@ -26,7 +26,7 @@ const Learn = () => {
   return (
     <main className="text-center maina-variaton">
       <h1 className="learn-title"><b><span style={{color:"white"}}>HIVE</span> <span style={{color:"red"}}>LEARN</span></b></h1>
-      <img className="learn-image" src="https://i.imgur.com/A1pBUcS.jpg"></img>
+      <img className="learn-image" alt="logo" src="https://i.imgur.com/A1pBUcS.jpg"></img>
       <Row as="section" className="learn-introduction">
         <Col className="introduction__paragraph--black" style={{paddingLeft:"4.7vw", paddingRight:"4.7vw"}} md={6}  as="p">Welcome to Hive Devs School, where you can master the Hive blockchain with expert-led education and a supportive community.</Col>
         <Col className="introduction__paragraph--white" style={{paddingLeft:"4.7vw", paddingRight:"4.7vw"}} md={6} as="p">Our curriculum is designed to help you acquire the skills you need to succeed in this rapidly growing field.</Col>

@@ -181,7 +181,7 @@ const Skill = () => {
                           onClick={() => removeLesson(lesson._id)}
                           className="box"
                         >
-                          <img className="white" src={tick} />
+                          <img className="white" alt="image describing that lesson is completed" src={tick} />
                           <div className="tick"></div>
                         </div>
                       ) : (

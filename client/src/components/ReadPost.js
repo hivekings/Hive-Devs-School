@@ -149,6 +149,7 @@ const PostSite = () => {
               <div className="comment__footer d-flex mt-2">
                 <div className="d-flex">
                 <img
+                  alt="symbol to comment"
                   height="20px"
                   className="comment__symbol"
                   src="https://i.imgur.com/8c3yfCH.png"
@@ -168,7 +169,7 @@ const PostSite = () => {
                 </div>
                 <div className="d-flex">
                 <div id="heart" className="comment__heart">
-                  <img src={heart}></img>
+                  <img alt="heart describing number of votes" src={heart}></img>
                   <b><span className="ms-1">{reply.active_votes.length}</span></b>
                 </div>
                 <div className="comment__payout">
@@ -289,7 +290,8 @@ const PostSite = () => {
           <div className="mt-2 mb-2"></div>
           <footer className="article__footer ">
             <div className="d-flex">
-          <img
+          <img  
+                  alt ="symbol to comment"
                   height="26px"
                   className="comment__symbol"
                   src="https://i.imgur.com/8c3yfCH.png"
@@ -307,7 +309,7 @@ const PostSite = () => {
                 </div>
             <div className="d-flex flex-row">
               <div id="heart" >
-                <img src={heart}></img>
+                <img alt="heart describing number of votes" src={heart}></img>
                 {post.active_votes && <span>{post.active_votes.length}</span>}
               </div>
        

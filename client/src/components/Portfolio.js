@@ -100,11 +100,11 @@ const Portfolio = () => {
         <Col md={5} as="aside" className="studentlinks">
             <h5 className="studentlinks__header">My Links</h5>
             <Row as="ul" className="studentlinks__list">
-              <Col as="li" className="studentlinks__list-element"><img width="55px" src="https://i.imgur.com/mXEt6ma.png" alt="" /></Col>
-              <Col as="li" className="studentlinks__list-element"><img width="55px" src="https://i.imgur.com/6hi1upx.png" alt="" /></Col>
-              <Col as="li" className="studentlinks__list-element"><img width="55px" src="https://i.imgur.com/FocPbPL.png" alt="" /></Col>
-              <Col as="li" className="studentlinks__list-element"><img width="55px" src="https://i.imgur.com/YBrOrPy.png" alt="" /></Col>
-              <Col as="li" className="studentlinks__list-element"><img width="55px" src="https://i.imgur.com/ZV2MIA6.png" alt="" /></Col>
+              <Col as="li" alt="link to github" className="studentlinks__list-element"><img width="55px" src="https://i.imgur.com/mXEt6ma.png" alt="" /></Col>
+              <Col as="li" alt="link to hive" className="studentlinks__list-element"><img width="55px" src="https://i.imgur.com/6hi1upx.png" alt="" /></Col>
+              <Col as="li" alt="link to twitter" className="studentlinks__list-element"><img width="55px" src="https://i.imgur.com/FocPbPL.png" alt="" /></Col>
+              <Col as="li" alt="link to instagram" className="studentlinks__list-element"><img width="55px" src="https://i.imgur.com/YBrOrPy.png" alt="" /></Col>
+              <Col as="li" alt="link to mail" className="studentlinks__list-element"><img width="55px" src="https://i.imgur.com/ZV2MIA6.png" alt="" /></Col>
             </Row>
         </Col>
       </Row>
