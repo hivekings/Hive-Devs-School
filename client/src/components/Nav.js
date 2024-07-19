@@ -102,17 +102,23 @@ function Nava() {
             <img alt="keychain_image" src={fefeas}></img>Connect Wallet
           </li>
         ) : (
-          <NavDropdown
-            className="navbar__list__listelement"
-            title={
-              <>
+          <div  className="navbar__list__listelement d-flex">
+          <Link to={"/profile/" + user}>
                 <Image
                   alt="user avatar"
                   height="40px"
                   roundedCircle
                   src={"https://images.hive.blog/u/" + user + "/avatar"}
-                />{" "}
-                <Link to={"/profile/" + user}>{user}</Link>
+                  
+                />
+                </Link>
+          <NavDropdown
+           
+            title={
+              <>
+              
+                {" "}
+                {/* {user}</Link> */}
               </>
             }
             id="basic-nav-dropdown"
@@ -121,6 +127,7 @@ function Nava() {
               Logout
             </NavDropdown.Item>
           </NavDropdown>
+          </div>
         )}
       </ul>
 

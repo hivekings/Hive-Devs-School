@@ -17,13 +17,9 @@ import KnowAboutHive from './components/KnowAboutHive';
 
 
 function RouterSwitch() {
-  const currentPath = window.location.pathname;
-  
-  console.log(currentPath)
   return (
  <BrowserRouter>
      
-    {/* {  currentPath!=="/join"  && currentPath!=="/Join" && <Nava/> }  */}
     <Nava/>
     <Routes>
       <Route path="/" element={<Welcome />} />

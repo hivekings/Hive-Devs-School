@@ -23,7 +23,7 @@ const Welcome = () => {
       <Col md={6} as="section">
         <img
           preload="true"
-          fetchPriority="high"
+          fetchpriority="high"
           className="leftsection__image"
           src="https://i.ibb.co/rGGxsFm/1m-Tr1oo-2.webp"
           alt="decorative image"
