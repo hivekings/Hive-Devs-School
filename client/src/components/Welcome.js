@@ -9,6 +9,10 @@ import "../styles/welcomeV2.css";
 
 
 const Welcome = () => {
+
+  const handleLogin = () => {
+    login(setUser);
+  }
   // const location = useLocation();
 
   // useEffect(() => {
@@ -41,7 +45,7 @@ const Welcome = () => {
           expert-led education and hands-on learning
         </p>
         {/* <Link to={localStorage.getItem('username')? "/learn" : "/join"}> */}
-          <button className="rightsection__button">START NOW</button>
+          <button onClick={handleLogin} className="rightsection__button">START NOW</button>
         {/* </Link> */}
       </Col>
     </Row> 
