@@ -40,9 +40,9 @@ const Welcome = () => {
           Empowering the next generation of Hive blockchain developers through
           expert-led education and hands-on learning
         </p>
-        <Link to={localStorage.getItem('username')? "/learn" : "/join"}>
+        {/* <Link to={localStorage.getItem('username')? "/learn" : "/join"}> */}
           <button className="rightsection__button">START NOW</button>
-        </Link>
+        {/* </Link> */}
       </Col>
     </Row> 
   );
