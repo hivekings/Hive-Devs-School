@@ -68,7 +68,6 @@ const Lesson = () => {
       }
     );
     const body = await result.json();
-    // console.log(body);
   };
 
   const removeLesson = async () => {
@@ -85,7 +84,6 @@ const Lesson = () => {
       }
     );
     const body = await result.json();
-    // console.log(body);
   };
 
   async function fetchRankedPosts(sort, tag, observer) {
@@ -134,7 +132,8 @@ const Lesson = () => {
       const body = await result.json();
       setProjects(body);
     } catch (err) {
-      console.log(err);
+      const body = []
+      setProjects(body);
     }
   };
 

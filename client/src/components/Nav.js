@@ -102,7 +102,7 @@ function Nava() {
             <img alt="keychain_image" src={fefeas}></img>Connect Wallet
           </li>
         ) : (
-          <div  className="navbar__list__listelement d-flex">
+          <li  className="navbar__list__listelement d-flex d-sm-none d-md-flex">
           <Link to={"/profile/" + user}>
                 <Image
                   alt="user avatar"
@@ -112,22 +112,18 @@ function Nava() {
                   
                 />
                 </Link>
-          <NavDropdown
+          <NavDropdown as="li"
             alt="dropdown menu"
             title={
-              <>
-              
-                {" "}
-                {/* {user}</Link> */}
-              </>
+              localStorage.getItem("username")
             }
             id="basic-nav-dropdown"
           >
-            <NavDropdown.Item className="" onClick={logOut}>
+            <NavDropdown.Item as="li" className="" onClick={logOut}>
               Logout
             </NavDropdown.Item>
           </NavDropdown>
-          </div>
+          </li>
         )}
       </ul>
 
@@ -138,7 +134,7 @@ function Nava() {
 
           <ul className="modal__list">
             <li className="modal__list__listelement--brand d-flex justify-content-between align-items-center">
-              <h5 className="modal__list-brand">
+              <h2 className="modal__list-brand">
                 {" "}
                 <Link to="/">
                   <span className="me-1" style={{ color: "white" }}>
@@ -146,7 +142,7 @@ function Nava() {
                   </span>{" "}
                   LEARN
                 </Link>{" "}
-              </h5>
+              </h2>
               <li style={{marginTop:"-10px"}} onClick={() => setIsMenuOpen(false)}>
                 <img alt="close_btn" width="40px" src={closebtn} />
               </li>
