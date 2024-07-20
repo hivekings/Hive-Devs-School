@@ -4,11 +4,11 @@ import Row from "react-bootstrap/Row";
 import "../styles/welcomeV2.css";
 import { Link } from "react-router-dom";
 import { login } from "./utils";  
-import { redirect } from "react-router-dom";
+
 
 const Welcome = () => {
   const handleLogin = () => {
-    // login();
+    login();
   }
 
   return (
