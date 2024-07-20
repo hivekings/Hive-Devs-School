@@ -1,4 +1,4 @@
-export function login(setUser) {
+export function login(setUser= null) {
     if (localStorage.getItem("username")) {
       return;
     } else {
@@ -11,7 +11,9 @@ export function login(setUser) {
           (res) => {
             if (res.success) {
               localStorage.setItem("username", res.data.username);
-              setUser(localStorage.getItem("username"));
+              if (setUser) {
+                setUser(localStorage.getItem("username"));
+              }
               window.location.reload();
             }
           }

@@ -2,10 +2,13 @@ import React from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import "../styles/welcomeV2.css";
+import { Link } from "react-router-dom";
+import { login } from "./utils";  
+import { redirect } from "react-router-dom";
 
 const Welcome = () => {
   const handleLogin = () => {
-    login(setUser);
+    // login();
   }
 
   return (
@@ -29,7 +32,10 @@ const Welcome = () => {
           Empowering the next generation of Hive blockchain developers through
           expert-led education and hands-on learning
         </p>
-          <button onClick={handleLogin} className="rightsection__button">START NOW</button>
+          {localStorage.getItem("username") ? <Link to="/learn">
+            <button className="rightsection__button">CONTINUE</button>
+          </Link> :
+          <button onClick={handleLogin} className="rightsection__button">START NOW</button>}
       </Col>
     </Row> 
   );
