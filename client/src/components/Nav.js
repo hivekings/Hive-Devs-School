@@ -6,29 +6,15 @@ import { Link } from "react-router-dom";
 import fefeas from "../images/keychain.png";
 import hamburguer from "../images/sandwich.svg";
 import closebtn from "../images/close_btn.svg";
+import { login } from "./utils";
 
 function Nava() {
-  function login() {
-    if (localStorage.getItem("username")) {
-      return;
-    } else {
-      const username = prompt("Please enter your hive username.");
-      if (username) {
-        window.hive_keychain.requestSignBuffer(
-          username,
-          "Login",
-          "Posting",
-          (res) => {
-            if (res.success) {
-              localStorage.setItem("username", res.data.username);
-              setUser(localStorage.getItem("username"));
-              window.location.reload();
-            }
-          }
-        );
-      }
-    }
-  }
+  const [user, setUser] = useState(localStorage.getItem("username"));
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleLogin = () => {
+    login(setUser);
+  };
 
   function logOut() {
     localStorage.removeItem("username");
@@ -54,8 +40,7 @@ function Nava() {
     });
   }
 
-  const [user, setUser] = useState(localStorage.getItem("username"));
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
   const toggleMenu2 = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -96,7 +81,7 @@ function Nava() {
         </li>
         {!user ? (
           <li
-            onClick={login}
+            onClick={handleLogin}
             className="navbar__list__listelement keychain navbar__list__listelement--image"
           >
             <img alt="keychain_image" src={fefeas}></img>Connect Wallet
